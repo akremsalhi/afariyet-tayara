@@ -1,34 +1,40 @@
 .cta {
 	text-align: center;
+	margin: 200px;
 
 	.section-inner {
-		padding: 48px 16px;
+		padding: 12px;
 	}
 
-	.section-title {
-		margin-bottom: 40px;
+	.contact-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 40px;
 	}
 }
 
 .cta-inner {
+	flex-grow: 1;
 	position: relative;
 	background: color(bg, 1);
-	overflow: hidden;
+	// overflow: hidden;
+	width: 280px;
+	
+	border-radius: 20px;
 
-	&::before {
-		content: "";
+	.icon {
 		position: absolute;
-		right: 98px;
-		top: -117px;
-		width: 160px;
-		height: 187px;
-		background-image: url("/dist/images/cta-illustration.svg");
-		background-repeat: no-repeat;
+		top: -40px;
+		left: -40px;
+		width: 80px;
 	}
 
-	> * {
-		position: relative; /* To display elements above hero illustrations */
-	}
+	// > * {
+	// 	position: relative; /* To display elements above hero illustrations */
+	// }
+
+
 }
 
 @include media(">medium") {
@@ -36,7 +42,8 @@
 		text-align: left;
 
 		.section-inner {
-			padding: 64px 32px;
+			padding: 30px;
+			font-weight: 600;
 		}
 
 		.section-title {
